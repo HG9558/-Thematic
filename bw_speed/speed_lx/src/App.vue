@@ -74,9 +74,9 @@ export default {
         return a.pingTime - b.pingTime;
       });
       if (this.linePingNum && this.linePingNum == this.lineDB.length) {
-          return r
-      }else {
-          return []
+        return r;
+      } else {
+        return [];
       }
     }
   },
