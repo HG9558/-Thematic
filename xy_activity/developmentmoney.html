@@ -13,6 +13,9 @@
 
 <body>
     <div class="wrapper">
+        <div class="goBack" onclick="back({action: 'goToList'})">
+            返回列表
+        </div>
         <div class="empty"></div>
         <div class="activity-introduction">
             <div class="first-line">
@@ -142,6 +145,18 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        function back(args) {
+            console.log(args)
+            if (parent && parent.closeIFrame) {
+                parent.closeIFrame(args)
+            } else {
+                location.search = args.action
+            }
+        }
+    </script>
 </body>
 
 </html>
